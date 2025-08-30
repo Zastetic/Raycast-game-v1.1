@@ -10,7 +10,7 @@ map_input = "#############E" \
             "#@@@@@@@@@@@#E" \
             "#@@@@@@@@@@@#E"
 
-image = pygame.image.load(r'3D_RAYCAST_PROJECT\02\seta.png')
+image = pygame.image.load(r'seta.png')
 image = pygame.transform.smoothscale(image, (30, 30))
 
 clock = pygame.time.Clock()
@@ -43,6 +43,7 @@ def main():
 
             for num in res:
                 arquivo.write(f'{str(int(num))}')
+                arquivo.write("/")
 
         pygame.display.update()
         ds.fill((50, 100, 10))

@@ -71,7 +71,7 @@ class Player(pygame.Rect):
 
             self.move_ip(velocity_x*velocity_move, 0)
 
-    def ray(self, colisores, fov=55, view_distance=200, separator=4):
+    def ray(self, colisores, fov=55, view_distance=600, separator=2):
         result = []
         self.ray_instance.x = self.x + (cos(self.angle))
         self.ray_instance.y = self.y + (sin(self.angle))
@@ -102,6 +102,7 @@ class Player(pygame.Rect):
         while len(result) < 27:
             result.append(0)
 
+        print(result)
         return result
 
 
